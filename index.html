@@ -26,20 +26,71 @@ header{text-align:center;padding:25px 16px 12px}.flag{height:5px;width:120px;mar
 
 /* Social-first comedy refresh */
 body{background:radial-gradient(circle at 8% 0,#ffe4bf 0,transparent 34%),radial-gradient(circle at 100% 12%,#c9f7e1 0,transparent 32%),#f4f5fa;color:#111827}.top{padding:22px 14px 8px;text-align:center}.brand{display:inline-block;background:#111827;color:white;padding:8px 13px;border-radius:99px;font-size:.75rem;font-weight:900;letter-spacing:1px}h1{font-size:clamp(2.5rem,9vw,5.5rem);line-height:.96;letter-spacing:-.05em;font-weight:1000}h1 span{color:#e76b00}.sub{color:#566174}.cards{gap:16px}.candidate{background:#fffdf7;color:#111827;border:2px solid white;border-radius:25px;padding:20px 16px;box-shadow:0 14px 35px #16223c12;position:relative;overflow:hidden}.candidate:before{content:"";position:absolute;inset:0 0 auto;height:7px;background:#ff9638}.candidate.gandhi:before{background:#18a66a}.avatar{width:135px;height:125px;border-radius:22px;margin:8px auto 12px;display:grid;place-items:center;font-size:4rem;border:2px solid #f1d5b6;background:linear-gradient(145deg,#fff1dc,#ffd49b);animation:bob 2.8s ease-in-out infinite;box-shadow:0 7px 0 #1b293310}.gandhi .avatar{background:linear-gradient(145deg,#e2fff0,#a7efc8);border-color:#b6e6ca;animation-delay:-1.4s}@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-6px) rotate(2deg)}}.candidate h2{font-size:clamp(1.15rem,4vw,1.65rem)}.party{color:#637083}.votes{font-size:clamp(1.8rem,6vw,2.6rem);color:#111827}.vote-label{color:#687386}.bar{background:#e9edf3;height:10px}.fill{background:#ff9638}.gandhi .fill{background:#18a66a}button{border-radius:14px;background:#ffb35c;box-shadow:0 4px 0 #d97920}.gandhi button{background:#63dda0;box-shadow:0 4px 0 #138a54}.results{background:#111827;color:#f8fafc;border:0;border-radius:20px}.results h3,.resultrow strong{color:#f8fafc}.resultrow{color:#bac5d4}.actions button{background:#263750}.notice{background:#fff6df;color:#5f4b22;border-color:#f0dfb2}.footer{color:#738095}@media(max-width:560px){.cards{gap:9px}.candidate{padding:14px 9px;border-radius:19px}.avatar{width:94px;height:90px;font-size:3rem}.candidate button{font-size:.83rem;padding:13px 4px}.votes{font-size:1.55rem}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Clean, consistent layout polish */
+:root{--ink:#172033;--muted-clean:#687386}
+body{background:linear-gradient(135deg,#fff8ef 0%,#f3f7ff 48%,#effcf5 100%);color:var(--ink)}
+header{padding:26px 16px 8px}
+.flag{height:6px;width:112px;margin-bottom:16px}
+.brand{font-size:.72rem;letter-spacing:.7px}
+h1{margin:15px auto 12px;line-height:1.02}
+.sub{max-width:680px;margin:9px auto;color:#536075;line-height:1.55}
+.tagline{font-size:.88rem;font-weight:800;color:#8a4b08!important;margin-top:0!important}
+.wrap{max-width:960px;padding-top:14px}
+.live{color:#536075;font-weight:750;margin:10px 0 12px}
+#pollTiming{max-width:760px;margin:0 auto 18px;background:#fff;border:1px solid #dce3ed;border-radius:14px;color:#43516a;box-shadow:0 4px 16px #17203308}
+.cards{align-items:stretch;gap:18px}
+.candidate{display:flex;flex-direction:column;background:#fff;border:1px solid #e2e7ef;border-radius:22px;padding:20px;box-shadow:0 12px 32px #18243b0c}
+.candidate:before{height:6px}
+.avatar{flex:0 0 auto;width:124px;height:116px;border-radius:18px;margin:8px auto 14px;animation:none;box-shadow:0 5px 15px #17203312}
+.candidate h2{margin:4px 0 5px;min-height:1.4em}
+.party{min-height:22px}
+.votes{margin:14px 0 0;line-height:1.2}
+.vote-label{min-height:20px;margin-top:4px;font-weight:650}
+.bar{margin:14px 0 12px}
+.card-sponsor,.card-count-btn{min-height:42px;margin:7px 0;padding:10px;border-radius:12px;text-align:center}
+.card-count-btn{font-family:inherit}
+.candidate>button:not(.card-count-btn){margin-top:7px;min-height:48px}
+.note{min-height:20px;line-height:1.4}
+.results{margin-top:18px;padding:20px;border-radius:20px;box-shadow:0 12px 30px #17203310}
+.results h3{font-size:1.05rem}
+.resultrow{padding:8px 0;margin:0;border-bottom:1px solid #ffffff16}
+.stats-actions{margin:16px 0 10px}
+.stats-actions button{border-radius:12px;min-height:74px;font-size:.88rem}
+.actions button{min-height:46px;border-radius:12px}
+.notice{line-height:1.65}
+.footer{max-width:850px;margin:auto;line-height:1.8}
+@media(max-width:560px){
+ header{padding:22px 13px 6px}
+ .wrap{padding:12px 12px 28px}
+ .cards{gap:11px}
+ .candidate{padding:15px 10px;border-radius:18px}
+ .avatar{width:88px;height:86px;border-radius:15px}
+ .candidate h2{font-size:1.05rem;overflow-wrap:anywhere}
+ .party{font-size:.73rem}
+ .votes{font-size:1.65rem}
+ .vote-label{font-size:.68rem}
+ .card-sponsor,.card-count-btn{font-size:.72rem;min-height:44px}
+ .candidate>button:not(.card-count-btn){font-size:.8rem;min-height:46px}
+ .stats-actions{gap:8px}
+ .stats-actions button{padding:10px 7px;font-size:.78rem}
+ .stats-actions button span{font-size:1.2rem}
+}
+
 </style>
 </head>
 <body>
-<header><div class="flag"></div><div class="brand">🇮🇳 DESI DEMOCRACY MEMES · 2026</div><h1>INDIA KA NEXT PM?<br><span>PUBLIC KA POLL! 😂</span></h1><p class="sub"><strong>जनता पूछे — कुर्सी किसकी?</strong> Vote डालो और दोस्तों को tag करो!</p><p class="sub" style="font-weight:900;color:#b45309;margin-top:-5px">आज आपकी राजनीति में सच–झूठ पहचानने की परीक्षा लेते हैं! 🧠</p></header>
+<header><div class="flag"></div><div class="brand">🇮🇳 DESI DEMOCRACY MEMES · 2026</div><h1>INDIA KA NEXT PM?<br><span>PUBLIC KA POLL! 😂</span></h1><p class="sub"><strong>जनता पूछे — कुर्सी किसकी?</strong> अपना वोट दें और दोस्तों के साथ शेयर करें।</p><p class="sub tagline">एक अनौपचारिक पब्लिक ओपिनियन पोल 🧠</p></header>
 <main class="wrap">
-<div class="live"><span class="dot"></span><span id="pollStatus">Scheduled poll · server time controls voting</span></div>
-<div id="pollTiming" class="notice" role="status" aria-live="polite">Voting opens at 9:00 PM India time and closes 25 hours later once the server schedule is configured.</div>
+<div class="live"><span class="dot"></span><span id="pollStatus">मतदान की स्थिति जाँची जा रही है…</span></div>
+<div id="pollTiming" class="notice" role="status" aria-live="polite">मतदान शुरू होने और बंद होने का समय नीचे दिखेगा।</div>
 <section class="cards" aria-label="Vote for a candidate">
 <article class="candidate modi"><div class="avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/The_official_portrait_of_Shri_Narendra_Modi%2C_the_Prime_Minister_of_the_Republic_of_India.jpg" alt="Narendra Modi official portrait" loading="eager" referrerpolicy="no-referrer"></div><h2>Narendra Modi</h2><div class="party">BJP · कमल 🌸</div><div class="votes" id="modiVotes">0</div><div class="vote-label">अब तक कुल दर्ज वोट</div><div class="bar"><div class="fill" id="modiBar"></div></div><a class="card-sponsor" href="https://uplcm.com/4/11565407" target="_blank" rel="noopener noreferrer nofollow sponsored">↗ Sponsored link</a><button class="card-count-btn" id="modiCountBtn" type="button">📊 अब तक के वोट देखें: <span id="modiCountOnBtn">0</span></button><button id="modiBtn" type="button">🌸 VOTE MODI</button><div class="note" id="modiVoteNote">Voting opens at 9:00 PM IST</div></article>
 <article class="candidate gandhi"><div class="avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Rahul_Gandhi.jpg" alt="Rahul Gandhi portrait" loading="eager" referrerpolicy="no-referrer"></div><h2>Rahul Gandhi</h2><div class="party">Congress · हाथ ✋</div><div class="votes" id="gandhiVotes">0</div><div class="vote-label">अब तक कुल दर्ज वोट</div><div class="bar"><div class="fill" id="gandhiBar"></div></div><a class="card-sponsor" href="https://mergerindirect.com/kf1ujxf25k?key=258266315b32d7e7a6335f103ba86138" target="_blank" rel="noopener noreferrer nofollow sponsored">↗ Sponsored link</a><button class="card-count-btn" id="gandhiCountBtn" type="button">📊 अब तक के वोट देखें: <span id="gandhiCountOnBtn">0</span></button><button id="gandhiBtn" type="button">✋ VOTE GANDHI</button><div class="note" id="gandhiVoteNote">Voting opens at 9:00 PM IST</div></article>
 </section>
-<div class="results"><h3>📊 PUBLIC LIVE COUNTING</h3><div class="resultrow"><span>Narendra Modi</span><strong id="modiPct">0%</strong></div><div class="resultrow"><span>Rahul Gandhi</span><strong id="gandhiPct">0%</strong></div><div class="resultrow"><span>TOTAL PUBLIC VOTES</span><strong id="total">0</strong></div><div class="stats-actions"><button id="totalVotesBtn" type="button">📊 अब तक कुल वोट देखें <span id="totalVotesBtnCount">0</span></button><button id="totalVisitorsBtn" type="button">👀 Total Visitors देखें <span id="totalVisitors">0</span></button></div><div class="actions"><button id="shareBtn" type="button">↗ Share Poll</button><button id="resetBtn" type="button">My vote status</button></div><div class="toast" id="message" role="status" aria-live="polite"></div></div>
+<div class="results"><h3>📊 लाइव सार्वजनिक वोट गिनती</h3><div class="resultrow"><span>Narendra Modi</span><strong id="modiPct">0%</strong></div><div class="resultrow"><span>Rahul Gandhi</span><strong id="gandhiPct">0%</strong></div><div class="resultrow"><span>कुल सार्वजनिक वोट</span><strong id="total">0</strong></div><div class="stats-actions"><button id="totalVotesBtn" type="button">📊 कुल वोट देखें <span id="totalVotesBtnCount">0</span></button><button id="totalVisitorsBtn" type="button">👀 कुल विज़िटर देखें <span id="totalVisitors">0</span></button></div><div class="actions"><button id="shareBtn" type="button">↗ पोल शेयर करें</button><button id="resetBtn" type="button">मेरे वोट की स्थिति</button></div><div class="toast" id="message" role="status" aria-live="polite"></div></div>
 <div class="notice"><strong>Important:</strong> यह unofficial social-media entertainment poll है, official election या सरकारी सर्वे नहीं। Vote button दबाने पर ही वोट गिना जाएगा। Live shared counting के लिए database connection जरूरी है; server बंद हो तो असली संख्या नहीं दिखेगी।</div>
-</main><footer class="footer">MODI GANDHI VOTING 2026 · Independent opinion poll · Not affiliated with any political party or government.<br>Photo sources: <a href="https://commons.wikimedia.org/wiki/File:The_official_portrait_of_Shri_Narendra_Modi,_the_Prime_Minister_of_the_Republic_of_India.jpg" target="_blank" rel="noopener noreferrer">Narendra Modi</a> · <a href="https://commons.wikimedia.org/wiki/File:Rahul_Gandhi.jpg" target="_blank" rel="noopener noreferrer">Rahul Gandhi</a></footer>
+</main><footer class="footer">MODI GANDHI VOTING 2026 · अनौपचारिक सार्वजनिक ओपिनियन पोल · किसी राजनीतिक दल या सरकार से संबद्ध नहीं।<br>तस्वीरों के स्रोत: <a href="https://commons.wikimedia.org/wiki/File:The_official_portrait_of_Shri_Narendra_Modi,_the_Prime_Minister_of_the_Republic_of_India.jpg" target="_blank" rel="noopener noreferrer">Narendra Modi</a> · <a href="https://commons.wikimedia.org/wiki/File:Rahul_Gandhi.jpg" target="_blank" rel="noopener noreferrer">Rahul Gandhi</a></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js"></script>
 <script>
 (function(){
